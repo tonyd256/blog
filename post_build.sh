@@ -1,8 +1,8 @@
-git config --global user.email "anthony.r.dipasquale@gmail.com"
-git config --global user.name "Travis"
+git config --global user.email $GIT_EMAIL
+git config --global user.name $GIT_NAME
 
 mkdir $HOME/tmp_blog
-git clone git@github.com:tonyd256/tonyd256.github.io.git $HOME/tmp_blog
+git clone https://${GIT_TOKEN}@github.com/tonyd256/tonyd256.github.io.git $HOME/tmp_blog
 
 cp -rf _site/* $HOME/tmp_blog/
 
