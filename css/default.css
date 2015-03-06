@@ -1,56 +1,25 @@
 body {
     color: black;
     font-size: 16px;
+    font-family: 'Mavin Pro', sans-serif;
     margin: 0px auto 0px auto;
-    width: 600px;
+    width: 800px;
 }
 
-div#header {
-    border-bottom: 2px solid black;
-    margin-bottom: 30px;
-    padding: 12px 0px 12px 0px;
+.posts {
+  list-style-type: none;
 }
 
-div#logo a {
-    color: black;
-    float: left;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
+.title {
+  font-size: 3em;
 }
 
-div#header #navigation {
-    text-align: right;
+.date {
+  font-size: .8em;
+  color: #AAA;
 }
 
-div#header #navigation a {
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
+#footer {
+  text-align: right;
 }
 
-div#footer {
-    border-top: solid 2px black;
-    color: #555;
-    font-size: 12px;
-    margin-top: 30px;
-    padding: 12px 0px 12px 0px;
-    text-align: right;
-}
-
-h1 {
-    font-size: 24px;
-}
-
-h2 {
-    font-size: 20px;
-}
-
-div.info {
-    color: #555;
-    font-size: 14px;
-    font-style: italic;
-}
