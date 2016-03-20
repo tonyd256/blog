@@ -6,7 +6,11 @@
             </a>
             <div>
               <span class="date">$date$</span>
-              <p>Teaser: $teaser$</p>
+              $if(teaser)$
+                <p>Teaser: $teaser$</p>
+              $else$
+                $body$
+              $endif$ 
             </div>
         </li>
     $endfor$

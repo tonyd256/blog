@@ -40,6 +40,7 @@ main = hakyll $ do
 
 
 --------------------------------------------------------------------------------
+teaserCtx :: Context String
 teaserCtx = teaserField "teaser" "content" `mappend` postCtx
 
 postCtx :: Context String
