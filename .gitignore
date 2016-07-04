@@ -9,3 +9,4 @@ site*
 !site.hs
 *.swp
 .stack-work
+.env
