@@ -4,8 +4,8 @@ import           Hakyll
 
 main :: IO ()
 main = hakyll $ do
-    match staticAssets $ do
-        route   idRoute
+    match (fromGlob "static/*" .||. fromGlob "static/**") $ do
+        route $ gsubRoute "static/" $ const ""
         compile copyFileCompiler
 
     match "posts/*" $ do
@@ -31,12 +31,6 @@ main = hakyll $ do
                 >>= relativizeUrls
 
     match "templates/*" $ compile templateCompiler
-
-staticAssets = fromList [ "CNAME"
-                        , "images/*"
-                        , "fonts/*"
-                        , "css/*"
-                        ]
 
 itemCtx = teaserCtx <> postCtx
 postCtx = dateCtx <> defaultContext
