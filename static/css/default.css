@@ -60,3 +60,12 @@ a:hover {
   text-decoration: none;
 }
 
+.social-hr {
+  margin-top: 6px;
+  margin-bottom: 3px;
+}
+
+.webring {
+  display: flex;
+  justify-content: space-between;
+}
