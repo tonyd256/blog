@@ -1,26 +1,12 @@
---------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid ((<>))
 import           Hakyll
 
---------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
-    match "CNAME" $ do
+    match staticAssets $ do
         route   idRoute
         compile copyFileCompiler
-
-    match "images/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    match "fonts/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    match "css/*" $ do
-        route   idRoute
-        compile compressCssCompiler
 
     match "posts/*" $ do
         route $ setExtension "html"
@@ -46,10 +32,13 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateCompiler
 
+staticAssets = fromList [ "CNAME"
+                        , "images/*"
+                        , "fonts/*"
+                        , "css/*"
+                        ]
 
---------------------------------------------------------------------------------
 itemCtx = teaserCtx <> postCtx
 postCtx = dateCtx <> defaultContext
 teaserCtx = teaserField "teaser" "content"
 dateCtx = dateField "date" "%B %e, %Y"
-
