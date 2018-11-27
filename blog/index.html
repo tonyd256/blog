@@ -1,0 +1,50 @@
+---
+layout: default
+title: Blog
+pagination:
+  enabled: true
+---
+{% include header.html %}
+
+<article id="main">
+  <header>
+    <h2>Adventures in Copy Creation</h2>
+  </header>
+  <section class="wrapper style5">
+    <div class="inner">
+      <ul class="alt no-border">
+        {% for post in paginator.posts %}
+          <li>
+            <header>
+              <h4>
+                {% if post.external_url %}
+                  <a href="{{ post.external_url }}" target="_blank">{{ post.title }}</a>
+                {% else %}
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+                {% endif %}
+              </h4>
+              <p>{{ post.teaser }}</p>
+            </header>
+          </li>
+        {% endfor %}
+      </ul>
+
+      {% if paginator.total_pages > 1 %}
+        <ul class="icons center">
+          {% if paginator.previous_page %}
+            <li>
+              <a href="{{ paginator.previous_page_path }}">Newer</a>
+            </li>
+          {% endif %}
+          {% if paginator.next_page %}
+            <li>
+              <a href="{{ paginator.next_page_path }}">Older</a>
+            </li>
+          {% endif %}
+        </ul>
+      {% endif %}
+    </div>
+  </section>
+</article>
+
+{% include footer.html %}

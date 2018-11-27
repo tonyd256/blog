@@ -1,12 +1,4 @@
-cabal-dev/
-.cabal-sandbox
-cabal.sandbox.config
-dist/
-_cache
 _site
+.sass-cache
+.jekyll-metadata
 .DS_Store
-site*
-!site.hs
-*.swp
-.stack-work
-.env

@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-
-set -e
-
-stack setup
-stack build --dependencies-only
