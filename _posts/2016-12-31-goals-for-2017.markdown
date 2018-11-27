@@ -78,7 +78,7 @@ these great machines, I'll be creating some awesome things. I've been slacking
 with posting my creations to Instagram so I'm setting a focus to take pictures
 and post all the cool stuff that comes out of this!
 
-[TechShop]: http://www.techshop.ws
+[TechShop]: https://www.techshop.ws
 
 ## Exploration
 
@@ -96,7 +96,7 @@ I've visited 14 tribes so far and my goal for the new year is to visit 3-5 new
 tribes! Currently on my bucket list: Seattle, Vancouver, Victoria, and Portland
 (been there but didn't visit the tribe).
 
-[November Project]: http://november-project.com
+[November Project]: https://november-project.com
 
 Finally, my last goal for 2017 ... run a beer mile! I've been feeling the FOMO
 with everyone and their grandma posting about their beer mile fun times, but I
