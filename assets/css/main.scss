@@ -1543,10 +1543,6 @@ body.is-menu-visible {
               }
             }
           }
-
-          @include breakpoint('<=small') {
-            padding: 0 0 0 1.5em;
-          }
         }
 
         &:first-child {

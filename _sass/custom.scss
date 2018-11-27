@@ -12,6 +12,21 @@ div.column {
   @include vendor('flex-direction', 'column');
 }
 
+img.profile {
+  width: 150px;
+  border-radius: 75px;
+}
+
+div.profile-image {
+  display: inline-block;
+  background-color: white;
+  border-radius: 77px;
+  width: 154px;
+  height: 154px;
+  padding-top: 2px;
+  margin-bottom: 32px;
+}
+
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
