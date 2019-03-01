@@ -21,7 +21,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-minifier
   - jekyll-compress-images
-  - jekyll-analytics
 
 sass:
   style: compressed
@@ -35,8 +34,3 @@ pagination:
 
 compress_images:
   images_path: "images/**/*.{gif,png,jpg,jpeg,svg}"
-
-jekyll-analytics:
-  GoogleAnalytics:
-    id: UA-80720313-1
-    anonymizeIp: false
