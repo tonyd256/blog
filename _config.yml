@@ -15,10 +15,10 @@
 # in the templates via {{ site.myvariable }}.
 title: Tony DiPasquale
 email: hi@tonyd.io
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: >-
+  A San Francisco based Photographer and Software Freelancer. Full stack
+  developer with JavaScript, Node.js, and iOS & Swift. Outdoor and travel
+  photographer.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://tonyd.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter: "https://twitter.com/TonyD256"
