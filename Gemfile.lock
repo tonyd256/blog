@@ -11,12 +11,25 @@ GEM
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
     execjs (2.7.0)
+    exifr (1.3.6)
     ffi (1.9.25)
     forwardable-extended (2.6.0)
+    fspath (3.1.0)
     htmlcompressor (0.4.0)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    image_optim (0.26.3)
+      exifr (~> 1.2, >= 1.2.2)
+      fspath (~> 3.0)
+      image_size (>= 1.5, < 3)
+      in_threads (~> 1.3)
+      progress (~> 3.0, >= 3.0.1)
+    image_optim_pack (0.5.1.20190105)
+      fspath (>= 2.1, < 4)
+      image_optim (~> 0.19)
+    image_size (2.0.0)
+    in_threads (1.5.1)
     jekyll (3.8.5)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -30,6 +43,10 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-analytics (0.1.11)
+    jekyll-compress-images (1.2)
+      image_optim
+      image_optim_pack
     jekyll-feed (0.11.0)
       jekyll (~> 3.3)
     jekyll-minifier (0.1.10)
@@ -58,6 +75,7 @@ GEM
     mercenary (0.3.6)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    progress (3.5.0)
     public_suffix (3.0.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
@@ -78,6 +96,8 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8.5)
+  jekyll-analytics
+  jekyll-compress-images
   jekyll-feed (~> 0.6)
   jekyll-minifier
   jekyll-paginate-v2 (~> 2.0)
