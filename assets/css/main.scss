@@ -9,7 +9,6 @@
 @import 'libs/html-grid';
 @import 'font-awesome.min.css';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
-@import 'custom';
 
 /*
 Spectral by HTML5 UP
@@ -342,7 +341,8 @@ header {
   }
 
   &.major {
-    margin: 0 0 (_size(element-margin) * 1.75) 0;
+    margin: 0 auto (_size(element-margin) * 1.75) auto;
+    text-align: center;
 
     h2, h3, h4, h5, h6 {
       border-bottom: solid 2px _palette(border);
@@ -364,6 +364,27 @@ header {
 
     @include breakpoint('<=small') {
       margin: 0 0 _size(element-margin) 0;
+    }
+  }
+
+  &.minor {
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+    h2, h3, h4, h5, h6 {
+      border-bottom: solid 2px _palette(border);
+      border-color: rgba(0, 0, 0, 0.125);
+      display: inline-block;
+      padding: 0 3em 1em 3em;
+      position: relative;
+    }
+
+    p {
+      color: _palette(fg);
+    }
+
+    @include breakpoint('<=small') {
+      margin: 0 0 1em 0;
     }
   }
 
@@ -800,6 +821,7 @@ ul.icons {
   }
 
   &.major {
+    margin: auto;
     padding: 1em 0;
 
     li {
@@ -1050,6 +1072,7 @@ button,
 .spotlight {
   @include vendor('align-items', 'center');
   @include vendor('display', 'flex');
+  @include padding(4em, 6em);
 
   .image {
     @include vendor('order', '1');
@@ -1063,21 +1086,24 @@ button,
   }
 
   .content {
-    @include padding(2em, 4em);
+    padding: 0 0 0 2em;
     @include vendor('order', '2');
     max-width: 48em;
     width: 60%;
   }
 
-  &:nth-child(2n) {
-    @include vendor('flex-direction', 'row-reverse');
-  }
+  @include breakpoint('>large') {
+    &:nth-child(2n) {
+      @include vendor('flex-direction', 'row-reverse');
+      text-align: right;
 
-  @for $i from 1 through _misc(max-spotlights) {
-    $j: 0.075 * $i;
+      .content {
+        padding: 0 2em 0 0;
+      }
+    }
 
-    &:nth-child(#{$i}) {
-      background-color: rgba(0,0,0, $j);
+    hr {
+      display: none;
     }
   }
 
@@ -1094,6 +1120,12 @@ button,
   @include breakpoint('<=medium') {
     display: block;
 
+    hr {
+      width: 10em;
+      display: block;
+      margin: 2em auto;
+    }
+
     br {
       display: none;
     }
@@ -1103,16 +1135,11 @@ button,
     }
 
     .content {
-      @include padding(4em, 3em);
+      padding: 0;
+      margin-top: 1em;
       max-width: none;
       text-align: center;
       width: 100%;
-    }
-  }
-
-  @include breakpoint('<=small') {
-    .content {
-      @include padding(3em, 2em);
     }
   }
 }
@@ -1342,6 +1369,7 @@ button,
   }
 
   &.style4 {
+    @include wrapper(accent4);
     background-color: transparent;
   }
 
@@ -1612,7 +1640,21 @@ body.is-menu-visible {
     text-transform: uppercase;
 
     a {
+      border-bottom: none;
+      text-decoration: none;
       color: inherit;
+      padding-left: 2px;
+
+      &::after {
+        content: '';
+        width: 0;
+        height: 1px;
+        background: white;
+        @include vendor('transition', 'width #{_duration(transitions)} ease');
+      }
+      &:hover::after {
+        width: 100%;
+      }
     }
   }
 
@@ -1761,11 +1803,6 @@ body.is-preload {
 #main {
   > header {
     @include padding(12em, 0);
-    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     text-align: center;
 
     h2 {
@@ -1886,7 +1923,7 @@ body.is-mobile {
 
 body.landing {
   #page-wrapper {
-    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
+    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6))', 'url(../../images/shasta-hires.jpg)'));
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1895,7 +1932,7 @@ body.landing {
   }
 
   #footer {
-    background-color: darken(transparentize(_palette(bg), 0.1), 8);
+    background-color: darken(_palette(bg), 8);
   }
 }
 
@@ -1907,7 +1944,7 @@ body.is-mobile {
 
     #banner,
     .wrapper.style4 {
-      @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
+      @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/shasta-hires.jpg")'));
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -1918,3 +1955,5 @@ body.is-mobile {
     }
   }
 }
+
+@import 'custom';

@@ -79,3 +79,137 @@ div.profile-image {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
+
+.major {
+  max-width: 51em;
+
+  h2 {
+    width: 20em;
+  }
+}
+
+.spotlight {
+  max-width: 100%;
+  width: 51em;
+  padding: 0px;
+  margin: auto;
+  justify-content: center;
+
+  &.adjust-up {
+    margin-top: -9em;
+
+    @include breakpoint('<medium') {
+      margin-top: -8em;
+    }
+  }
+
+  div {
+    flex-grow: 1;
+    width: 100%;
+
+    &.content {
+      width: 100%;
+    }
+
+    &.image {
+      padding: 0 0 0 0;
+      width: 100%;
+    }
+  }
+}
+
+#one {
+  position: relative;
+  z-index: 2;
+}
+
+#two {
+  position: relative;
+  z-index: 1;
+  padding-top: 0;
+
+  header {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: solid 1px rgba(0, 0, 0, 0.125);
+    height: 100%;
+    top: 9em;
+    left: 50%;
+
+    @include breakpoint('<=medium') {
+      display: none;
+    }
+  }
+}
+
+#three {
+  z-index: 2;
+  position: relative;
+}
+
+.diamond {
+  top: -13em;
+  position: relative;
+  @include vendor('transform', 'rotate(45deg)');
+  margin: auto;
+  border: solid 1px rgba(0, 0, 0, 0.125);
+  width: 10em;
+  height: 10em;
+  padding: 8px;
+
+  &:before {
+    display: block;
+    content: '';
+    height: 100%;
+    border: solid 1px rgba(0, 0, 0, 0.125);
+  }
+
+  @include breakpoint('<=small') {
+    top: -12em;
+  }
+}
+
+img.frame {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+.techs {
+  @include vendor('display', 'flex');
+  @include vendor('flex-wrap', 'wrap');
+  @include vendor('justify-content', 'center');
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+
+  li {
+    padding: 2em 0 1em 0;
+    display: block;
+    position: relative;
+    width: 33%;
+
+    @include breakpoint('<=small') {
+      padding: 0 0 1em 0;
+      width: 50%;
+    }
+
+    @include breakpoint('<=xsmall') {
+      padding: 0 0 1em 0;
+      width: 100%;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  max-width: 100%;
+}
