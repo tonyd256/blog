@@ -80,6 +80,18 @@ div.profile-image {
   to {bottom: 0; opacity: 0;}
 }
 
+.banner-links {
+  @include breakpoint('<small') {
+    a {
+      display: block;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}
+
 .major {
   max-width: 51em;
 
