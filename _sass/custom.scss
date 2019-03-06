@@ -29,7 +29,7 @@ div.profile-image {
 
 #header {
   a {
-    padding: 6px 0;
+    padding: 0.5em 0;
   }
 }
 
@@ -95,6 +95,15 @@ div.profile-image {
     span {
       display: none;
     }
+  }
+}
+
+.zoom {
+  display: inline-block;
+  @include vendor('transition', 'transform .3s');
+
+  &:hover {
+    @include vendor('transform', 'scale(1.15)');
   }
 }
 
