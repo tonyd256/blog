@@ -35,4 +35,13 @@ pagination:
 compress_images:
   images_path: "images/**/*.{gif,png,jpg,jpeg,svg}"
 
-exclude: ['_site', 'node_modules', '_compress_images_cache.yml']
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - _site
+  - _compress_images_cache.yml
