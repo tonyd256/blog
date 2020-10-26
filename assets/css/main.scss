@@ -1923,7 +1923,9 @@ body.is-mobile {
 
 body.landing {
   #page-wrapper {
-    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6))', 'url(../../images/shasta-hires.jpg)'));
+    background-image: linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/images/shasta-hires.jpg);
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/images/shasta-hires.jpg);
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/images/shasta-hires.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1944,7 +1946,9 @@ body.is-mobile {
 
     #banner,
     .wrapper.style4 {
-      @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/shasta-hires.jpg")'));
+      background-image: linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/images/shasta-hires.jpg);
+      background-image: -moz-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/images/shasta-hires.jpg);
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/images/shasta-hires.jpg);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
